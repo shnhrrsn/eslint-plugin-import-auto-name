@@ -1,0 +1,19 @@
+{
+  "name": "eslint-plugin-import-auto-name",
+  "version": "1.0.0",
+  "description": "eslint plugin for https://github.com/shnhrrsn/babel-plugin-import-auto-name",
+  "author": "Shaun Harrison (@shnhrrsn)",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shnhrrsn/eslint-plugin-import-auto-name.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
+  "peerDependencies": {
+    "eslint": "2.x"
+  }
+}
