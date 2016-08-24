@@ -16,7 +16,7 @@ module.exports = {
 						return original;
 					}
 
-					return leading + 'import {' + name + '} from \'' + importPath + '\'' + trailing
+					return leading + 'import { ' + name + ' } from \'' + importPath + '\'' + trailing
 				}) ];
 			},
 
