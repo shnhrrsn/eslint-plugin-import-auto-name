@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-import-auto-name",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "eslint plugin for https://github.com/shnhrrsn/babel-plugin-import-auto-name",
   "author": "Shaun Harrison (@shnhrrsn)",
   "license": "MIT",
