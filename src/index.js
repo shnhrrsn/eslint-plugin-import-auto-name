@@ -1,31 +1,29 @@
-var path = require('path');
+const path = require('path')
 
 module.exports = {
 
 	processors: {
-		".js": {
-			preprocess: function(text, filename) {
-				return [ text.replace(/(^\s*)import\s+'([^']+)'(\s*$)/gm, function(original, leading, importPath, trailing) {
+		'.js': {
+			preprocess(text, filename) {
+				return [ text.replace(/(^\s*)import\s+'([^']+)'(\s*$)/gm, (original, leading, importPath, trailing) => {
 					if(importPath.indexOf('/') < 0) {
 						return original;
 					}
 
-					var name = path.basename(importPath);
+					const name = path.basename(importPath)
 
 					if(name.indexOf('.') >= 0) {
-						return original;
+						return original
 					}
 
-					return leading + 'import { ' + name + ' } from \'' + importPath + '\'' + trailing
-				}) ];
+					return `${leading}import { ${name} } from '${importPath}'${trailing}`
+				}) ]
 			},
 
-			postprocess: function(messages, filename) {
-				return messages.reduce(function(a, b) {
-					return a.concat(b)
-				})
+			postprocess(messages, filename) {
+				return messages.reduce((a, b) => a.concat(b))
 			}
 		}
 	}
 
-};
+}
